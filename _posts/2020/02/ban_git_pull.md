@@ -28,16 +28,15 @@ If main has moved ahead of me during development I’ll get the latest changes a
 
 A few things may stand out about this process:
 
-<ol>
-<li>I never run run `git merge` or `git pull`.</li>
-<li>I never checkout a local version of main.</li>
-<li>I force push my feature branch.</li>
-</ol>
-<ol>
-<li>Pulls and merges are replaced by fetches and rebases. They don’t hide what they do and don’t reverse the direction of code from target branch to feature branch.</li>
-<li>Never checking out the target branch (in this case main) removes so much complication around ensuring your local version is in sync with the server. In a pull request model, you never commit directly to main so there’s no reason to check it out.</li>
-<li>When you play in the world of rebase, you must get comfortable with force pushes. They rewrite the history of past commits and cause problems when others are working from the same branch. But when it’s a branch you solely own, force push all day long.</li>
-</ol>
+1. I never run run `git merge` or `git pull`.
+2. I never checkout a local version of main.
+3. I force push my feature branch.
+
+<p></p>
+
+1. Pulls and merges are replaced by fetches and rebases. They don’t hide what they do and don’t reverse the direction of code from target branch to feature branch.
+2. Never checking out the target branch (in this case main) removes so much complication around ensuring your local version is in sync with the server. In a pull request model, you never commit directly to main so there’s no reason to check it out.
+3. When you play in the world of rebase, you must get comfortable with force pushes. They rewrite the history of past commits and cause problems when others are working from the same branch. But when it’s a branch you solely own, force push all day long.
 
 ### Aliases
 I fetch and rebase onto the target branch at least once a day. Some of these commands are lengthy and make you wish for a GUI that abstracts the complexity away. But like I said before, git leaks its abstractions constantly which make the job of a git wrapper program difficult. I recommend sticking to the native git CLI but making extensive use of aliases. Here are a few of my favorites.
