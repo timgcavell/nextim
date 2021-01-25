@@ -11,6 +11,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link rel="icon" type="image/png" href="/favicon.png" />
+          <link rel="apple-touch-icon-precomposed" href="/favicon.png" />
           <meta name="description" content={SITE_NAME} />
         </Head>
         <body>
