@@ -11,10 +11,7 @@
 }
 
 body {
-  padding-top: 2%;
-  padding-left: 8%;
-  padding-right: 8%;
-  padding-bottom: 5%;
+  padding: 2% 4%;
   font-family: Geneva, sans-serif;
   color: var(--clr-text);
   background-color: var(--clr-bg);
@@ -65,7 +62,6 @@ pre code {
   display: block;
   overflow: auto;
   padding: 1em;
-  margin: auto 1.5em;
   line-height: 1.3em;
 }
 
