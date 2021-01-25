@@ -13,18 +13,34 @@ While everyone should decide for themselves how they like to manage their work, 
 The merits of merging or rebasing pull requests into the target branch is another argument and up to the people managing the repository. But I don’t see any reason to merge the target branch into your feature branch. Code moves from a feature branch into the target, not the other direction. So what do I do when I want to bring the latest code into my feature branch? Rebase, never merge.
 
 ### Commands
-My general development process usually looks like this:  
-`git fetch # Get the latest changes from the server`  
-`git checkout origin/main # Checkout the latest commit on main`  
-`git checkout -b feature/foo # Create and checkout my feature branch`  
-*Make code changes*  
-`git commit # Commit changes to the local repository`  
-`git push --set-upstream origin feature/foo # Sync branch with the remote repository`  
+My general development process usually looks like this:
 
-If main has moved ahead of me during development I’ll get the latest changes and place my code on top of them:  
-`git fetch`  
-`git rebase origin/main # Put my commits on top of main`  
-`git push -f # Force push my branch to the server`
+    # Get the latest changes from the server
+    git fetch
+
+    # Checkout the latest commit on main
+    git checkout origin/main
+
+    # Create and checkout my feature branch
+    git checkout -b feature/foo
+
+    # Make code changes
+
+    # Commit changes to the local repository
+    git commit
+
+    # Sync branch with the remote repository
+    git push --set-upstream origin feature/foo
+
+If main has moved ahead of me during development I’ll get the latest changes and place my code on top of them:
+
+    git fetch
+
+    # Put my commits on top of main
+    git rebase origin/main
+
+    # Force push my branch to the server
+    git push -f
 
 A few things may stand out about this process:
 

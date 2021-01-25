@@ -63,6 +63,7 @@ code {
 
 pre code {
   display: block;
+  overflow: auto;
   padding: 1em;
   margin: auto 1.5em;
   line-height: 1.3em;
