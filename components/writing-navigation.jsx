@@ -5,8 +5,8 @@ export default function WritingNavigation({ posts }) {
       <ul>
         {posts.map((post) => {
           return (
-            <li key={post.slug}>
-              <a href={post.slug}>{post.title}</a>
+            <li key={post.name}>
+              <a href={post.name}>{post.title}</a>
             </li>
           );
         })}

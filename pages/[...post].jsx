@@ -3,7 +3,7 @@ import ErrorPage from "next/error";
 import Head from "next/head";
 import PostHeader from "../components/post-header";
 import SiteNavigation from "../components/site-navigation";
-import { getPostBySlug, getAllPosts } from "../lib/api";
+import { getPostByName, getAllPosts } from "../lib/api";
 import { SITE_NAME } from "../lib/constants";
 import markdownToHtml from "../lib/markdownToHtml";
 import PostBody from "../components/post-body";
@@ -14,7 +14,7 @@ export const config = {
 
 export default function Post({ post }) {
   const router = useRouter();
-  if (!router.isFallback && !post?.slug) {
+  if (!router.isFallback && !post?.name) {
     return <ErrorPage statusCode={404} />;
   }
   return (
@@ -32,7 +32,7 @@ export default function Post({ post }) {
 }
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug.join("/"));
+  const post = getPostByName(params.post.join("/"));
   const content = await markdownToHtml(post.content || "");
 
   return {
@@ -50,17 +50,17 @@ export async function getStaticPaths() {
 
   return {
     paths: posts.map((post) => {
-      if (!post.slug) {
+      if (!post.name) {
         return {
           params: {
-            slug: [],
+            post: [],
           },
         };
       }
 
       return {
         params: {
-          slug: post.slug.split("/"),
+          post: post.name.split("/"),
         },
       };
     }),

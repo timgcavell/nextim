@@ -1,5 +1,5 @@
-export default async function markdownToHtmlShowdown(markdown: string) {
-  const showdown = require("showdown");
-  const converter = new showdown.Converter();
-  return converter.makeHtml(markdown);
+import marked from "marked";
+
+export default async function markdownToHtml(markdown: string) {
+    return marked(markdown);
 }

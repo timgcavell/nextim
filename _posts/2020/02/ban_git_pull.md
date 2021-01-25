@@ -32,7 +32,6 @@ A few things may stand out about this process:
 2. I never checkout a local version of main.
 3. I force push my feature branch.
 
-<p></p>
 
 1. Pulls and merges are replaced by fetches and rebases. They don’t hide what they do and don’t reverse the direction of code from target branch to feature branch.
 2. Never checking out the target branch (in this case main) removes so much complication around ensuring your local version is in sync with the server. In a pull request model, you never commit directly to main so there’s no reason to check it out.
