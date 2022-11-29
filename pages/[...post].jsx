@@ -17,11 +17,12 @@ export default function Post({ post }) {
   if (!router.isFallback && !post?.name) {
     return <ErrorPage statusCode={404} />;
   }
+  const title = `${post.title} | ${SITE_NAME}`;
   return (
     <>
       <Head>
         <title>
-          {post.title} | {SITE_NAME}
+          {title}
         </title>
       </Head>
       <PostHeader post={post} />
