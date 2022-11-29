@@ -1,5 +1,5 @@
-import marked from "marked";
+const { marked } = require('marked');
 
 export default async function markdownToHtml(markdown: string) {
-    return marked(markdown);
+    return marked.parse(markdown);
 }
