@@ -1,19 +1,13 @@
+import Link from "next/link";
+
 export default function SiteNavigation() {
   return (
     <nav>
-      <a className="nav-link" href="/">
-        Home
-      </a>
-      <a className="nav-link" href="mailto:me@timgcavell.com">
-        Email
-      </a>
-      <a className="nav-link" href="https://github.com/timgcavell">
-        Code
-      </a>
-      <a className="nav-link" href="https://twitter.com/timcavell">
-        Tweets
-      </a>
-      <a rel="me" href="https://hachyderm.io/@timcavell" />
+      <Link className="nav-link" href="/">Home</Link>
+      <Link className="nav-link" href="mailto:me@timgcavell.com">Email</Link>
+      <Link className="nav-link" href="https://github.com/timgcavell">Code</Link>
+      <Link className="nav-link" href="https://twitter.com/timcavell">Tweets</Link>
+      <Link rel="me" href="https://hachyderm.io/@timcavell"></Link>
     </nav>
   );
 }
