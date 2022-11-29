@@ -13,6 +13,7 @@ export default function SiteNavigation() {
       <a className="nav-link" href="https://twitter.com/timcavell">
         Tweets
       </a>
+      <a rel="me" href="https://hachyderm.io/@timcavell" />
     </nav>
   );
 }
