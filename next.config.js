@@ -1,6 +1,16 @@
 module.exports = {
     reactStrictMode: true,
     poweredByHeader: false,
+    async redirects() {
+        return [
+          {
+            source: "/@timcavell",
+            destination: "https://hachyderm.io/@timcavell",
+            permanent: false,
+            basePath: false,
+          },
+        ];
+      },
     async rewrites() {
         return [
             {
